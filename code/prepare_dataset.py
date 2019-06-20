@@ -16,7 +16,7 @@ def read_csv():
                 metadata.update({row[1]: row[2]})
     return metadata
 
-# Problema se le directory esistono gia'
+
 def preparing_directory(metadata):
     values = list(set([x for x in metadata.values()]))
     for name in values:
@@ -25,17 +25,16 @@ def preparing_directory(metadata):
 
 
 def subdivide_image(metadata):
-    dir_name = ['HAM10000_images_part_1', 'HAM10000_images_part_1']
+    dir_name = ['HAM10000_images_part_1', 'HAM10000_images_part_2']
     for directory in dir_name:
         for file_ in os.listdir(directory):
             filename = os.path.splitext(file_)[0]
             class_ = metadata[filename]
-            print(class_)
             shutil.copyfile(directory+"/"+file_, class_+"/"+file_)
-            exit()
 
 
 if __name__ == "__main__":
     metadata = read_csv()
     preparing_directory(metadata)
     subdivide_image(metadata)
+    print("DONE!")
