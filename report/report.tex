@@ -1,0 +1,90 @@
+\documentclass[11pt,oneside]{book}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[toc,page]{appendix}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{lipsum}
+\usepackage{caption}
+
+% Added packages
+
+\renewcommand\thesection{\arabic{section}}
+
+\begin{document}
+	
+	\captionsetup[figure]{margin=1.5cm,font=small,labelfont={bf},name={Figure},labelsep=colon,textfont={it}}
+	\captionsetup[table]{margin=1.5cm,font=small,labelfont={bf},name={Table},labelsep=colon,textfont={it}}
+	\setlipsumdefault{1}
+	
+	\frontmatter
+	
+	\begin{titlepage}
+		
+		
+		% -------------------------------------------------------------------
+		% Front page
+		% -------------------------------------------------------------------
+		
+		\begin{center}
+			{\LARGE University of Padua}\\[1cm]
+			{\Large Department of Computer Science}\\[2cm]
+			\includegraphics[width=5cm]{images/logo-unipd.png}\\[2cm]
+			\linespread{1.2}\huge {\bfseries Skin cancer classification using Keras}\\[1.5cm]
+			\linespread{1}
+			{\Large Alberto Bezzon 1211016 \\ Tommaso Carraro 1210937}\\[1cm]
+			%{\large \emph{Supervisor:} Supervisor's Name}\\[1cm] % if applicable
+			\large The report resumes briefly the cognitive services project\\[0.5cm] 
+			Academic year 2018 - 2019
+		\end{center}
+		
+	\end{titlepage}
+	
+	
+	% -------------------------------------------------------------------
+	% Abstract
+	% -------------------------------------------------------------------
+	
+	\input{sections/abstract.tex}
+	
+	
+	% -------------------------------------------------------------------
+	% Contents, list of figures, list of tables
+	% -------------------------------------------------------------------
+	
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	
+	
+	% -------------------------------------------------------------------
+	% Main sections (as required)
+	% -------------------------------------------------------------------
+	
+	\mainmatter
+	
+	\input{sections/introduction.tex}
+	%\input{sections/background.tex}
+	%\input{sections/methodology.tex}
+	%\input{sections/results.tex}
+	%\input{sections/discussion.tex}
+	%\input{sections/conclusion.tex}
+	
+	
+	% -------------------------------------------------------------------
+	% Bibliography
+	% -------------------------------------------------------------------
+	
+	\bibliographystyle{agsm} 
+	\bibliography{mybibliography} 
+	
+	
+	% -------------------------------------------------------------------
+	% Appendices
+	% -------------------------------------------------------------------
+	
+	\begin{appendices}
+		%\input{sections/appendixA.tex}
+		%\input{sections/appendixB.tex}
+	\end{appendices}
+	
+\end{document}
