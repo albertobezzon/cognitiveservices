@@ -75,6 +75,11 @@ def train_split():
         image = element[7:-4]
         shutil.copyfile('Images/' + image + '.jpg', 'training_set/' + image + '.jpg')
 
+    for element in x_test_o:
+        # Get filename
+        image = element[7:-4]
+        shutil.copyfile('Images/' + image + '.jpg', 'test_set/' + image + '.jpg')
+
 
 def data_augmentation():
     class_list = ['akiec', 'bcc', 'bkl', 'df', 'mel', 'vasc']
@@ -142,6 +147,20 @@ def create_metadata():
             writer.writerow([key, value])
 
 
+def test_metadata(ham_metadata):
+    metadata = {}
+    for file_ in os.listdir('train_test'):
+        filename_tuple = os.path.splitext(file_)
+        filename = filename_tuple[0] + filename_tuple[1]
+        metadata[filename] = ham_metadata[filename_tuple[0]]
+
+    with open('test.csv', 'w', newline='') as csv_file:
+        writer = csv.writer(csv_file)
+        writer.writerow(['image_id', 'dx'])
+        for key, value in metadata.items():
+            writer.writerow([key, value])
+
+
 def aggregate_images():
     if not os.path.exists('all_images'):
         print("Creating directory all_images")
@@ -170,6 +189,7 @@ if __name__ == "__main__":
     #data_augmentation()
     #count_element_dir()
     #create_metadata()
-    aggregate_images()
+    #aggregate_images()
+    test_metadata(metadata)
     
 
