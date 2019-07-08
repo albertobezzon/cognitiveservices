@@ -3,16 +3,19 @@ import os
 import shutil
 import numpy as np
 import pandas as pd
-from glob import glob
 from PIL import Image
+from glob import glob
+from keras.utils.np_utils import to_categorical
 from keras.preprocessing.image import ImageDataGenerator
 from sklearn.model_selection import train_test_split
-from keras.utils.np_utils import to_categorical
 
 
-def read_csv():
+def read_csv(filename):
+    '''
+    Read csv and create a dictionary with interest values
+    '''
     metadata = {}
-    with open('HAM10000_metadata.csv') as csv_file:
+    with open(filename) as csv_file:
         csv_reader = csv.reader(csv_file, delimiter = ',')
         line_count = 0
         for row in csv_reader:
@@ -24,22 +27,36 @@ def read_csv():
 
 
 def preparing_directory(metadata):
+    '''
+    Create a directory for each class of metadata file
+    '''
     values = list(set([x for x in metadata.values()]))
     for name in values:
         if not os.path.exists(name):
             os.mkdir(name)
+        else:
+            for file_ in os.listdir(name):
+                os.remove(name + '/' + file_)
 
 
 def subdivide_image(metadata):
-    dir_name = ['training_set']
-    for directory in dir_name:
+    '''
+    Subdivide images of directory list in directories, one for each class
+    '''
+    directory_list = ['training_set']
+    for directory in directory_list:
         for file_ in os.listdir(directory):
             filename = os.path.splitext(file_)[0]
             class_ = metadata[filename]
             shutil.copyfile(directory+"/"+file_, class_+"/"+file_)
 
 
-def train_split():
+def train_split(test_size = 0.20):
+    '''
+    Split the whole dataset HAM10000 in training and test set.
+    '''
+
+    # This directory must contains all images of HAM10000
     base_skin_dir = 'Images'
     imageid_path_dict = {os.path.splitext(os.path.basename(x))[0]: x for x in glob(os.path.join(base_skin_dir, '*.jpg'))}
 
@@ -58,27 +75,28 @@ def train_split():
     skin_df['cell_type'] = skin_df['dx'].map(lesion_type_dict.get)
     skin_df['cell_type_idx'] = pd.Categorical(skin_df['cell_type']).codes
 
-    x_train_o, x_test_o, y_train_o, y_test_o = train_test_split(skin_df['path'], skin_df['cell_type_idx'], test_size=0.20, random_state=1234)
+    # Split dataset in training and test set
+    x_train_o, x_test_o, y_train_o, y_test_o = train_test_split(skin_df['path'], skin_df['cell_type_idx'], test_size=test_size, random_state=1234)
     
-    if not os.path.exists('training_set'):
-        print("Creating directory training_set")
-        os.mkdir('training_set')
-        print("Done")
-    else:
-        print("training_set is already present, removing all images inside it")
-        for file_ in os.listdir('training_set'):
-            os.remove(file_)
-        print("Done")
+    directory_list = ['training_set', 'test_set']
+    for directory in directory_list:
+        if not os.path.exists(directory):
+            print("Creating {} directory".format(directory))
+            os.mkdir(directory)
+            print("{} created".format(directory))
+        else:
+            print("{} is already present, removing all images inside it".format(directory))
+            for file_ in os.listdir(directory):
+                os.remove(directory + '/' + file_)
+            print("Files in {} removed".format(directory))
     
+    # Copy images of training and test set in training and set directory 
     for element in x_train_o:
-        # Get filename
-        image = element[7:-4]
-        shutil.copyfile('Images/' + image + '.jpg', 'training_set/' + image + '.jpg')
-
+        image = element[len(base_skin_dir)+1:]
+        shutil.copyfile(base_skin_dir + '/' + image, directory_list[0] + '/' + image)
     for element in x_test_o:
-        # Get filename
-        image = element[7:-4]
-        shutil.copyfile('Images/' + image + '.jpg', 'test_set/' + image + '.jpg')
+        image = element[len(base_skin_dir)+1:]
+        shutil.copyfile(base_skin_dir + '/' + image, directory_list[1] + '/' + image)
 
 
 def data_augmentation():
@@ -104,7 +122,6 @@ def data_augmentation():
             dst = os.path.join(img_dir, fname)
             # copy the image from the source to the destination
             shutil.copyfile(src, dst)
-
 
         # point to a dir containing the images and not to the images themselves
         path = aug_dir
@@ -162,34 +179,33 @@ def test_metadata(ham_metadata):
 
 
 def aggregate_images():
-    if not os.path.exists('all_images'):
-        print("Creating directory all_images")
-        os.mkdir('allImages')
-        print("Done")
+    base_dir = 'all_images'
+    if not os.path.exists(base_dir):
+        print("Creating {} directory".format(base_dir))
+        os.mkdir(base_dir)
+        print("{} created".format(base_dir))
     else:
-        print("all_images is already present, removing all images inside it")
-        for file_ in os.listdir('all_images'):
-            print(file_)
-            os.remove('all_images/' + file_)
-        print("Done")
+        print("{} is already present, removing all images inside it".format(base_dir))
+        for file_ in os.listdir(base_dir):
+            os.remove(base_dir + '/' + file_)
+        print("Files in {} removed".format(base_dir))
+    
     directory_list = ['nv', 'mel', 'bkl', 'bcc', 'akiec', 'vasc', 'df']
-    print("Copying images of class directories inside all_images")
+    print("Copying images of class directories inside {}".format(base_dir))
     for directory in directory_list:
         for file_ in os.listdir(directory):
-            shutil.copyfile(directory + '/' + file_, 'all_images/' + file_)
+            shutil.copyfile(directory + '/' + file_, base_dir + '/' + file_)
     print("Done")
 
 
 if __name__ == "__main__":
-    #metadata = read_csv()
-    #train_split()
-    #preparing_directory(metadata)
-    #subdivide_image(metadata)
-    #print("DONE!")
-    #data_augmentation()
-    #count_element_dir()
-    #create_metadata()
-    #aggregate_images()
+    metadata = read_csv('HAM10000_metadata.csv')
+    train_split()
+    preparing_directory(metadata)
+    subdivide_image(metadata)
+    data_augmentation()
+    count_element_dir()
+    create_metadata()
+    aggregate_images()
     test_metadata(metadata)
     
-
