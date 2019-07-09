@@ -2,12 +2,27 @@
 \usepackage[margin=1.2in]{geometry}
 \usepackage[toc,page]{appendix}
 \usepackage{graphicx}
-\usepackage{natbib}
 \usepackage{lipsum}
 \usepackage{caption}
 
 % Added packages
+\usepackage[british,UKenglish,USenglish,english,american]{babel}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage[hidelinks]{hyperref}
+\usepackage[backend=bibtex,style=numeric-comp,hyperref,backref,sorting=none]{biblatex}
+\addbibresource{bibliography.bib}
+\usepackage{tabularx} 
+\usepackage{ltxtable} 
 
+
+\hypersetup{
+	colorlinks   = true, %Colours links instead of ugly boxes
+	urlcolor     = blue, %Colour for external hyperlinks
+	linkcolor    = blue, %Colour of internal links
+	citecolor   = red %Colour of citations
+}
+\renewcommand*{\arraystretch}{1.5}
 \renewcommand\thesection{\arabic{section}}
 
 \begin{document}
@@ -44,16 +59,16 @@
 	% Abstract
 	% -------------------------------------------------------------------
 	
-	\input{sections/abstract.tex}
+	%\input{sections/abstract.tex}
 	
 	
 	% -------------------------------------------------------------------
 	% Contents, list of figures, list of tables
 	% -------------------------------------------------------------------
 	
-	\tableofcontents
-	\listoffigures
-	\listoftables
+	%\tableofcontents
+	%\listoffigures
+	%\listoftables
 	
 	
 	% -------------------------------------------------------------------
@@ -63,28 +78,30 @@
 	\mainmatter
 	
 	\input{sections/introduction.tex}
-	%\input{sections/background.tex}
-	%\input{sections/methodology.tex}
-	%\input{sections/results.tex}
-	%\input{sections/discussion.tex}
+	\input{sections/related_works.tex}
+	\input{sections/dataset.tex}
+	\input{sections/method.tex}
+	\input{sections/experiments.tex}
 	%\input{sections/conclusion.tex}
 	
 	
 	% -------------------------------------------------------------------
 	% Bibliography
 	% -------------------------------------------------------------------
+
+	%\bibliographystyle{unsrtnat} 
+	%\bibliography{bibliography} 
+	\printbibliography
 	
-	\bibliographystyle{agsm} 
-	\bibliography{mybibliography} 
 	
 	
 	% -------------------------------------------------------------------
 	% Appendices
 	% -------------------------------------------------------------------
 	
-	\begin{appendices}
+	%\begin{appendices}
 		%\input{sections/appendixA.tex}
 		%\input{sections/appendixB.tex}
-	\end{appendices}
+	%\end{appendices}
 	
 \end{document}
