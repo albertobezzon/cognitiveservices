@@ -1,4 +1,4 @@
-\section{Related works}
+\section{Related works} \label{related_works}
 	We have viewed different state-of-the-art papers. 
 	In \cite{article1} researchers used Google’s Inception v3 CNN architecture pretrained on the 2014 ImageNet Challenge. They then removed the final classification layer from the network and retrained it with their dataset, fine-tuning the parameters across all layers. During training they resized each image to 299 ×  299 pixels in order to made it compatible with the original dimensions of the Inception v3 network architecture. All layers of the network were fine-tuned using the same global learning rate and RMSProp optimizer. They performed their experiments on a 129.000 images dataset, created from a combination of different datasets. They obtained 72.1\% overall accuracy training their model on 757 classes. To create these training classes they used a taxonomy of skin disease and a partitioning algorithm that maps diseases into training classes. We have tried to obtain these data, but they were protected by the Stanford Hospital.
 	

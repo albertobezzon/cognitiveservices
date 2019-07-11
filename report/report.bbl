@@ -79,5 +79,24 @@
     \field{title}{New Compact Deep Learning Model for Skin Cancer Recognition}
     \field{year}{2018}
   \endentry
+
+  \entry{article4}{article}{}
+    \name{author}{1}{}{%
+      {{hash=PTCRHK}{%
+         family={Philipp\bibnamedelima Tschandl},
+         familyi={P\bibinitperiod\bibinitdelim T\bibinitperiod},
+         given={Cliff Rosendahl \& Harald\bibnamedelima Kittler},
+         giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod \bibinitperiod
+  H\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PTCRHK1}
+    \strng{fullhash}{PTCRHK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{The HAM10000 dataset, a large collection of multi-source
+  dermatoscopic images of common pigmented skin lesions}
+    \field{year}{2018}
+  \endentry
 \enddatalist
 \endinput

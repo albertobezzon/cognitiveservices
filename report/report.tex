@@ -15,6 +15,13 @@
 \usepackage{tabularx} 
 \usepackage{ltxtable} 
 
+\usepackage{enumitem,booktabs}
+\usepackage[referable]{threeparttablex}
+\renewlist{tablenotes}{enumerate}{1}
+\makeatletter
+\setlist[tablenotes]{label=\tnote{\arabic*},ref=\arabic*,itemsep=\z@,topsep=\z@skip,partopsep=\z@skip,parsep=\z@,itemindent=\z@,labelindent=\tabcolsep,labelsep=.2em,leftmargin=*,align=left,before={\footnotesize}}
+\makeatother
+
 
 \hypersetup{
 	colorlinks   = true, %Colours links instead of ugly boxes
@@ -22,6 +29,7 @@
 	linkcolor    = blue, %Colour of internal links
 	citecolor   = red %Colour of citations
 }
+\setcounter{secnumdepth}{3}
 \renewcommand*{\arraystretch}{1.5}
 \renewcommand\thesection{\arabic{section}}
 
@@ -82,7 +90,7 @@
 	\input{sections/dataset.tex}
 	\input{sections/method.tex}
 	\input{sections/experiments.tex}
-	%\input{sections/conclusion.tex}
+	\input{sections/conclusion.tex}
 	
 	
 	% -------------------------------------------------------------------
