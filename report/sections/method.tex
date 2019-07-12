@@ -50,11 +50,11 @@
 					
 				\end{tabular}		
 				\begin{tablenotes}
-					\item\label{tnote:model1} Model with
-					\item\label{tnote:model2}
-					\item\label{tnote:model3}
-					\item\label{tnote:model4}
-					\item\label{tnote:model5}
+					\item\label{tnote:model1} $2 x Conv2D(32) \rightarrow MaxPool2D \rightarrow Flatten \rightarrow FC(64) \rightarrow Dropout(0.5) \rightarrow Softmax(7)$
+					\item\label{tnote:model2} $2 x Conv2D(32) \rightarrow MaxPool2D \rightarrow 2 x Conv2D(64) \rightarrow MaxPool2D \rightarrow Flatten \rightarrow FC(128) \rightarrow Dropout(0.5) \rightarrow Softmax(7)$
+					\item\label{tnote:model3} $2 x Conv2D(32) \rightarrow MaxPool2D \rightarrow 2 x Conv2D(64) \rightarrow MaxPool2D \rightarrow 2 x Conv2D(128) \rightarrow MaxPool2D \rightarrow Flatten \rightarrow FC(256) \rightarrow Dropout(0.5) \rightarrow Softmax(7)$
+					\item\label{tnote:model4} $2 x Conv2D(32) \rightarrow MaxPool2D \rightarrow 2 x Conv2D(64) \rightarrow MaxPool2D \rightarrow 2 x Conv2D(128) \rightarrow MaxPool2D \rightarrow 2 x Conv2D(256) \rightarrow MaxPool2D \rightarrow Flatten \rightarrow FC(512) \rightarrow Dropout(0.5) \rightarrow Softmax(7)$
+					\item\label{tnote:model5} $2 x Conv2D(32) \rightarrow MaxPool2D \rightarrow 2 x Conv2D(64) \rightarrow MaxPool2D \rightarrow 2 x Conv2D(128) \rightarrow MaxPool2D \rightarrow 2 x Conv2D(256) \rightarrow MaxPool2D \rightarrow 2 x Conv2D(512) \rightarrow MaxPool2D \rightarrow Flatten \rightarrow FC(1024) \rightarrow Dropout(0.5) \rightarrow Softmax(7)$
 				\end{tablenotes}
 			\end{threeparttable}
 			\caption{Models performances}
