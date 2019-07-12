@@ -1,0 +1,31 @@
+check 
+CNNs architectures CNNs models o CNN architectures?
+pensare se manca qualcosa nella bibliografia
+formattare bene il documento perché con vari spostamenti è tutto una merda
+Malattie minuscole o maiuscole -> maiuscolo solo la prima
+PH2 compare la prima volta in introduzione
+inflammation o flammation??
+
+sostituire tutti i net con network
+
+help the network to avoid overfitting o avoids overfitting?
+
+In fact, having machines capable to early detection of malignant skin cancers -> to early detect?
+differences o difference figure1
+
+mettere keras in maiuscolo
+
+occhio ai plurali sulle malattie
+
+fells mettere al passato, fells vuol dire cade e non è caduta... (GCP)
+non sono sicuro che vogliamo un modello che massimizza precision e recall, boh
+
+controllare latex
+
+apostrofi (fatto ma lo lascio)
+not della forma negativa (fatto ma lo lascio)
+controllare fi if (fatto ma lo lascio)
+ricontrollare se abbiamo risposto a tutte le domande del pdf
+
+dropout layers non abbiamo messo % ma diciamo percentage
+
