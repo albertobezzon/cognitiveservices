@@ -50,8 +50,8 @@
 		
 	\subsubsection{Oversampling with data augmentation}
 	
-		The last experiment we tried on HAM10000 is the oversampling of minority classes with data augmentation. After splitting the dataset as reported in section (dataset), the number of examples in Melanocytic nevis class was 4868, so we applied data augmentation to all the other classes to obtain a balanced training set. After applying these procedures, we obtained a 34.076 images training set.
-		To oversampling the training set we have used keras’ ImageDataGenerator with the following parameters:
+		The last experiment we tried on HAM10000 is the oversampling of minority classes with data augmentation. After splitting the dataset as reported in Section \ref{dataset}, the number of examples in Melanocytic nevis class was 4868, so we applied data augmentation to all the other classes to obtain a balanced training set. After applying these procedures, we obtained a 34.076 images training set.
+		To oversampling the training set we have used keras' ImageDataGenerator with the following parameters:
 		\begin{itemize}
 			\item rotation range: 45; 
 			\item zoom range: 0.2; 
@@ -72,7 +72,7 @@
 			\label{fig:third-matrix}
 		\end{figure}
 		
-		Unfortunately, we did not achieve the desired results, in fact even if the model trained on oversampled dataset is better in predicting Dermatofibromas (52\% well classified Dermatofibromas against 48\% of the previous model), and this explains the higher macro average f1 (0.56 against 0.51), it reintroduces difficulties in distinguish between Melanomas and Melanocytic nevis (25\% of Melanomas are classified like a Melanocytic nevi). 
+		Unfortunately, we did not achieve the desired results, in fact even if the model trained on oversampled dataset is better in predicting Dermatofibromas (52\% well classified Dermatofibromas against 48\% of the previous model), and this explains the higher macro average F1 (0.56 against 0.51), it reintroduces difficulties in distinguish between Melanomas and Melanocytic nevis (25\% of Melanomas are classified like a Melanocytic nevi). 
 		Moreover, due to aggressive data augmentation (we added more than 4000 augmented images to Dermatofibroma class) the model tends to badly overfit, even if regularizations techniques are configured. In Figure \ref{fig:overfitting-data-aug} is possible to see the overfitting of this last model.
 		
 		\begin{figure}[H]
@@ -99,7 +99,7 @@
 			\label{tab:experiments_results}
 		\end{table}
 	
-		The model trained on the oversampled training set gives better results in terms of performance measures compared to the other models, but tends to misclassifyF too much Melanomas, that are the most important class for our goal.
+		The model trained on the oversampled training set gives better results in terms of performance measures compared to the other models, but tends to misclassify too much Melanomas, that are the most important class for our goal.
 		So, in conclusion, even if the last model performs relatively well, we prefer to select the model with class weighting as our best model because it has performances that better meet our goal of reducing the number of misclassified skin lesions.
 		
 		

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.2)  11 JUL 2019 20:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.2)  12 JUL 2019 12:42
 entering extended mode
 **./report.tex
 (report.tex
@@ -842,8 +842,6 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no — in font cmr10!
  [1
 
 ])
@@ -851,7 +849,7 @@ Missing character: There is no — in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
-<images/category_samples.png, id=85, 2905.85625pt x 3088.94025pt>
+<images/category_samples.png, id=86, 2905.85625pt x 3088.94025pt>
 File: images/category_samples.png Graphic file (type png)
 <use images/category_samples.png>
 Package pdftex.def Info: images/category_samples.png  used on input line 37. on
@@ -859,7 +857,7 @@ Package pdftex.def Info: images/category_samples.png  used on input line 37. on
 Package pdftex.def Info: Requested size: 426.79134pt x 453.6587pt on input line
  37.
  [3] [4 <./images/category_samples.png>]
-<images/graph1.png, id=108, 665.48625pt x 372.79276pt>
+<images/graph1.png, id=109, 665.48625pt x 372.79276pt>
 File: images/graph1.png Graphic file (type png)
 <use images/graph1.png>
 Package pdftex.def Info: images/graph1.png  used on input line 51. on input lin
@@ -868,7 +866,7 @@ Package pdftex.def Info: Requested size: 426.79134pt x 239.08144pt on input lin
 e 51.
 )
 (sections/method.tex [5 <./images/graph1.png>]
-<images/base_model.png, id=121, 384.83775pt x 109.00725pt>
+<images/base_model.png, id=123, 384.83775pt x 109.00725pt>
 File: images/base_model.png Graphic file (type png)
 <use images/base_model.png>
 Package pdftex.def Info: images/base_model.png  used on input line 31. on input
@@ -885,7 +883,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 53.
  [7 <./images/base_model.png>]
-<images/proposed_model.png, id=150, 386.04225pt x 289.68225pt>
+<images/proposed_model.png, id=153, 386.04225pt x 289.68225pt>
 File: images/proposed_model.png Graphic file (type png)
 <use images/proposed_model.png>
 Package pdftex.def Info: images/proposed_model.png  used on input line 71. on i
@@ -893,7 +891,7 @@ nput line 71.
 Package pdftex.def Info: Requested size: 426.79134pt x 320.26482pt on input lin
 e 71.
  [8 <./images/proposed_model.png>]
-<images/accuracy-loss-001.png, id=160, 1136.44576pt x 865.43324pt>
+<images/accuracy-loss-001.png, id=163, 1136.44576pt x 865.43324pt>
 File: images/accuracy-loss-001.png Graphic file (type png)
 <use images/accuracy-loss-001.png>
 Package pdftex.def Info: images/accuracy-loss-001.png  used on input line 105. 
@@ -905,7 +903,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--105
 []\OT1/cmr/bx/n/9 (a) |\OT1/cmr/m/it/9 Learn-ing
  []
 
-<images/accuracy-loss-00001.png, id=161, 1134.03674pt x 854.59274pt>
+<images/accuracy-loss-00001.png, id=164, 1134.03674pt x 854.59274pt>
 File: images/accuracy-loss-00001.png Graphic file (type png)
 <use images/accuracy-loss-00001.png>
 Package pdftex.def Info: images/accuracy-loss-00001.png  used on input line 107
@@ -917,7 +915,7 @@ Underfull \hbox (badness 6608) in paragraph at lines 107--107
 []\OT1/cmr/bx/n/9 (b) |\OT1/cmr/m/it/9 Learn-ing
  []
 
-<images/accuracy-loss-0001.png, id=162, 1130.42325pt x 857.00175pt>
+<images/accuracy-loss-0001.png, id=165, 1130.42325pt x 857.00175pt>
 File: images/accuracy-loss-0001.png Graphic file (type png)
 <use images/accuracy-loss-0001.png>
 Package pdftex.def Info: images/accuracy-loss-0001.png  used on input line 109.
@@ -950,7 +948,7 @@ Overfull \hbox (16.84447pt too wide) in paragraph at lines 24--25
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
-<images/firstMatrix.png, id=187, 462.528pt x 346.896pt>
+<images/firstMatrix.png, id=189, 462.528pt x 346.896pt>
 File: images/firstMatrix.png Graphic file (type png)
 <use images/firstMatrix.png>
 Package pdftex.def Info: images/firstMatrix.png  used on input line 33. on inpu
@@ -958,26 +956,22 @@ t line 33.
 Package pdftex.def Info: Requested size: 426.79134pt x 320.11154pt on input lin
 e 33.
 [11]
-<images/secondMatrix.png, id=197, 462.528pt x 346.896pt>
+<images/secondMatrix.png, id=199, 462.528pt x 346.896pt>
 File: images/secondMatrix.png Graphic file (type png)
 <use images/secondMatrix.png>
 Package pdftex.def Info: images/secondMatrix.png  used on input line 46. on inp
 ut line 46.
 Package pdftex.def Info: Requested size: 426.79134pt x 320.11154pt on input lin
 e 46.
- [12 <./images/firstMatrix.png>]
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
- [13 <./images/secondMatrix.png>]
-<images/thirdMatrix.png, id=212, 462.528pt x 346.896pt>
+ [12 <./images/firstMatrix.png>] [13 <./images/secondMatrix.png>]
+<images/thirdMatrix.png, id=215, 462.528pt x 346.896pt>
 File: images/thirdMatrix.png Graphic file (type png)
 <use images/thirdMatrix.png>
 Package pdftex.def Info: images/thirdMatrix.png  used on input line 70. on inpu
 t line 70.
 Package pdftex.def Info: Requested size: 426.79134pt x 320.11154pt on input lin
 e 70.
-<images/overfitting-data-aug.png, id=214, 1084.05pt x 361.35pt>
+<images/overfitting-data-aug.png, id=217, 1084.05pt x 361.35pt>
 File: images/overfitting-data-aug.png Graphic file (type png)
 <use images/overfitting-data-aug.png>
 Package pdftex.def Info: images/overfitting-data-aug.png  used on input line 80
@@ -1001,19 +995,28 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 115.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 115.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: C56DB2E1C600F2EF57A3ECFAD90D3334;710.
+
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run BibTeX on the file(s):
+(biblatex)                report
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 115.
  ) 
 Here is how much of TeX's memory you used:
- 15307 strings out of 493312
- 254915 string characters out of 3146698
+ 15308 strings out of 493312
+ 254929 string characters out of 3146698
  669278 words of memory out of 3000000
- 18526 multiletter control sequences out of 15000+200000
+ 18527 multiletter control sequences out of 15000+200000
  12494 words of font info for 43 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,17n,49p,1596b,2191s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,17n,49p,1597b,2191s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/MiKTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/MiKTex/fonts/type1/p
 ublic/amsfonts/cm/cmbx12.pfb><D:/MiKTex/fonts/type1/public/amsfonts/cm/cmbx9.pf
 b><D:/MiKTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/MiKTex/fonts/type1/pu
@@ -1023,9 +1026,9 @@ c/amsfonts/cm/cmr7.pfb><D:/MiKTex/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/M
 iKTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/MiKTex/fonts/type1/public/a
 msfonts/cm/cmti10.pfb><D:/MiKTex/fonts/type1/public/amsfonts/cm/cmti9.pfb><D:/M
 iKTex/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (19 pages, 2435988 bytes).
+Output written on report.pdf (19 pages, 2437121 bytes).
 PDF statistics:
- 318 PDF objects out of 1000 (max. 8388607)
+ 321 PDF objects out of 1000 (max. 8388607)
  73 named destinations out of 1000 (max. 500000)
  149 words of extra memory for PDF output out of 10000 (max. 10000000)
 
