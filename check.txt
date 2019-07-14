@@ -1,19 +1,18 @@
 check 
 pensare se manca qualcosa nella bibliografia -> forse mettere dove abbiamo trovato i dati del 90% al 14%
-formattare bene il documento perché con vari spostamenti è tutto una merda -> fatto
 Malattie minuscole o maiuscole -> maiuscolo solo la prima
 introduzione, modificare le sezioni
 
 occhio ai plurali sulle malattie
 
-fells mettere al passato, fells vuol dire cade e non è caduta... (GCP) -> cambiato con has fallen
-non sono sicuro che vogliamo un modello che massimizza precision e recall, boh -> ah benon
+da rileggere per questo -> non sono sicuro che vogliamo un modello che massimizza precision e recall, boh -> vedere se cambiare una frase, magari mettere giusto tradeoff tra le due...
 
 controllare latex
 alcuni verbi all'infito: to increase con solo increase
 
 ricontrollare se abbiamo risposto a tutte le domande del pdf
 
-dropout layers non abbiamo messo % ma diciamo percentage, presented e presents nella stessa frase
+rileggendo sistemare se occorre -> dropout layers non abbiamo messo % ma diciamo percentage, presented e presents nella stessa frase
 
-Abstract siamo a 110 parole (almeno 300) -> forse si può ampiare? Magari mettendo percentuale accuratezza spiegando
+Abstract siamo a 110 parole (almeno 300) -> secondo me così è accattivante, rischiamo di rompere tutto aggiungendo cose e anche di essere più ripetitivi di quanto già non siamo
+-> mancano approach e key result ma secondo me non ha senso mettere in abstract
