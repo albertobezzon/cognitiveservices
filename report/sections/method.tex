@@ -2,11 +2,11 @@
 
 	\subsection{Experimental enviroment}
 	
-	Training a deep learning model that involves intensive compute tasks on large dataset can take days to run on a single CPU or a slow GPU. In our case, since HAM10000 dataset has 10015 images, it was unthinkable to perform the training of a convolutional neural network with a standard laptop. The solution turned to cloud computing. The choice fells on Google Cloud Platform because of the availability of free tier that consists in 300\$ free credits that can be used in any GCP product. 
+	Training a deep learning model that involves intensive compute tasks on large dataset can take days to run on a single CPU or a slow GPU. In our case, since HAM10000 dataset has 10015 images, it was unthinkable to perform the training of a convolutional neural network with a standard laptop. The solution turned to cloud computing. The choice has fallen on Google Cloud Platform because of the availability of free tier that consists in 300\$ free credits that can be used in any GCP product. 
 	
 	\smallskip
 	
-	We have tested our CNNs models on a custom instance of Compute Engine. Our VM’s configuration is presented in Table \ref{tab:hw-config}.
+	We have tested our CNN models on a custom instance of Compute Engine. Our VM's configuration is presented in Table \ref{tab:hw-config}.
 	
 	\begin{table}[H]
 		\centering
@@ -21,7 +21,7 @@
 		\label{tab:hw-config}
 	\end{table}
 	
-	Our models have been implemented in keras using tensorflow as a backend. The code is available on our GitHub repository: \url{https://github.com/albertobezzon/cognitiveservices}.
+	Our models have been implemented in Keras using tensorflow as a backend. The code is available on our GitHub repository: \url{https://github.com/albertobezzon/cognitiveservices}.
 
 	\subsection{Performance measures choice}
 		
@@ -47,7 +47,7 @@
 		
 	\subsection{Proposed model architecture}
 	
-		For the design of our CNN model architecture we have followed a common design pattern in CNNs. This pattern consists in building a simple model architecture with only one convolutional block and to increase its depth until the adding of a new convolutional block does not give better performances compared to the last model built. We proceeded this way because we found that this pattern performs well in general image classification tasks and the experiments in \cite{article3} showed that it performs well even in skin cancer classification task. So, we began our project with the construction of a base model that we have then tried to improve. In Figure \ref{fig:base_model} we present our base model. Its architecture is composed of a convolutional block and a simple classification block, which are the building blocks of modern CNNs architectures. The convolutional block is composed of two convolutional layers with 32 activation maps followed by a max pooling layer. We have decided to set a 3x3 filter size for the convolutional layers because local features in skin lesions are relatively small. The classification block is composed of a flatten layer used to flat the output of the convolutional block, a fully connected layer with 64 units and finally a softmax layer. We have then added a dropout layer after the fully connected layer. We will explain our regularizations techniques in Section \ref{regularization_techniques}. 
+		For the design of our CNN model architecture we have followed a common design pattern in CNNs. This pattern consists in building a simple model architecture with only one convolutional block and to increase its depth until the adding of a new convolutional block does not give better performances compared to the last model built. We proceeded this way because we found that this pattern performs well in general image classification tasks and the experiments in \cite{article3} showed that it performs well even in skin cancer classification task. So, we began our project with the construction of a base model that we have then tried to improve. In Figure \ref{fig:base_model} we present our base model. Its architecture is composed of a convolutional block and a simple classification block, which are the building blocks of modern CNN architectures. The convolutional block is composed of two convolutional layers with 32 activation maps followed by a max pooling layer. We have decided to set a 3x3 filter size for the convolutional layers because local features in skin lesions are relatively small. The classification block is composed of a flatten layer used to flat the output of the convolutional block, a fully connected layer with 64 units and finally a softmax layer. We have then added a dropout layer after the fully connected layer. We will explain our regularizations techniques in Section \ref{regularization_techniques}. 
 		
 		\begin{figure}[H]
 			\centering
@@ -89,15 +89,15 @@
 		Even if model 3 has the best performances on melanoma detection we chose model 4 because we think it is able to capture more complex features on the images, in fact it has the highest F1 score in Dermatofibroma class, that seems to be the most difficult to classify for our models, and also it outperforms the other models on all the other classes. We think that our proposed model can reached these performances thanks to the number of convolutional blocks on it, in fact more convolutional blocks a network has and more complex features on the images will be able to detect. Moreover, we observed that model 4 has reached the maximum depth for our CNN in this specific task, in fact the adding of another convolutional block decreases most of the metrics scores.
 		Finally, every time we added a new convolutional block we doubled also the number of units in the fully connected layer at the top of the network. We chose this strategy because more complex are the features that the convolution block is able to identify and more units in the fully connected layer will be required to capture these complex features.
 		
+		In Figure \ref{fig:proposed_model} we present the proposed model architecture. It performs well on HAM10000 compared to transfer learning and it has the advantage of the simplicity in the architecture. It is less depth and it takes faster training times thanks to the smaller number of parameters to be learnt. 
+		After we have found the best architecture for this task we tried to do some experiments to increase its performances, such as class weighting and oversampling with data augmentation to deal with the problem of imbalanced data. In Section \ref{experiments} we present these experiments.
+		
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=15cm]{images/proposed_model.png}
 			\caption{Proposed model architecture}
 			\label{fig:proposed_model}
 		\end{figure}
-		
-		In Figure \ref{fig:proposed_model} we present the proposed model architecture. It performs well on HAM10000 compared to transfer learning and it has the advantage of the simplicity in the architecture. It is less depth and it takes faster training times thanks to the smaller number of parameters to be learnt. 
-		After we have found the best architecture for this task we tried to do some experiments to increase its performances, such as class weighting and oversampling with data augmentation to deal with the problem of imbalanced data. In Section \ref{experiments} we present these experiments.
 	
 	\subsection{Regularization techniques and training settings}
 	
@@ -124,7 +124,7 @@
 			Finally, we have selected 0.0001 learning rate because we observed it was the best tradeoff between convergence speed and overfitting.
 			In Figure \ref{fig:val_acc_lr} we show how training and validation accuracy behaviours change with the change of the learning rate.
 			
-			\begin{figure}[!h] 
+			\begin{figure}[H] 
 				\subfloat[Learning rate 0.001]{\includegraphics[width=0.33\columnwidth]{images/accuracy-loss-001.png}}
 				\hspace*{\fill}
 				\subfloat[Learning rate 0.00001]{\includegraphics[width=0.33\columnwidth]{images/accuracy-loss-00001.png}}
@@ -140,23 +140,25 @@
 			\begin{itemize}
 				\item Adam optimizer with 0.0001 learning rate and the other optimizer parameters at their default;
 				\item categorical cross entropy loss function;
-				\item 32 batch size: this is the default batch size in keras and we observed good performances on our model with this batch size;
+				\item 32 batch size: this is the default batch size in Keras and we observed good performances on our model with this batch size;
 				\item 200 epochs: we decided this number to allow the network to learn as much as possible from the training set. If the model begins to overfit the early stopping will stop the training and it will restore the best weights;
 				\item Regularization techniques showed in section \ref{regularization_techniques}.
 			\end{itemize}
 		
 	\subsection{Proposed model performances}
 	
-		In Figure \ref{fig:first-matrix} we show the performances of our proposed model on the test set. It is possible to see that our model has difficulties in predicting Dermatofibromas (only 11\% correctly classified) and Melanomas (only 27\% correctly classified). In particular, Dermatofibromas are confused with Basal cell carcinomas (33\% of Dermatofibromas are classified like a Basal cell carcinoma) and Melanocytic nevis (33\% of Dermatofibromas are classified like a Melanocytic nevi), while Melanomas are confused with Melanocytic nevis (46\% of Melanomas are classified like a Melanocytic nevi). 
-		This means that these classes are similar in terms of features and the imbalanced of the dataset doesn’t help in discriminating well between them. We have too few examples for Dermatofibromas and too much examples for Melanocytic Nevis. Similar problems are also present in few of the other classes.
+		In Figure \ref{fig:first-matrix} we show the performances of our proposed model on the test set. 
 		
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=15cm]{images/firstMatrix.png}
 			\caption{Confusion matrix of the proposed model}
 			\label{fig:first-matrix}
-		\end{figure}	
-			
+		\end{figure}
+		
+		It is possible to see that our model has difficulties in predicting Dermatofibromas (only 11\% correctly classified) and Melanomas (only 27\% correctly classified). In particular, Dermatofibromas are confused with Basal cell carcinomas (33\% of Dermatofibromas are classified like a Basal cell carcinoma) and Melanocytic nevis (33\% of Dermatofibromas are classified like a Melanocytic nevi), while Melanomas are confused with Melanocytic nevis (46\% of Melanomas are classified like a Melanocytic nevi). 
+		This means that these classes are similar in terms of features and the imbalanced of the dataset does not help in discriminating well between them. We have too few examples for Dermatofibromas and too much examples for Melanocytic Nevis. Similar problems are also present in few of the other classes.
+				
 			
 		
 		

@@ -1,31 +1,19 @@
 check 
-CNNs architectures CNNs models o CNN architectures?
-pensare se manca qualcosa nella bibliografia
-formattare bene il documento perché con vari spostamenti è tutto una merda
+pensare se manca qualcosa nella bibliografia -> forse mettere dove abbiamo trovato i dati del 90% al 14%
+formattare bene il documento perché con vari spostamenti è tutto una merda -> fatto
 Malattie minuscole o maiuscole -> maiuscolo solo la prima
-PH2 compare la prima volta in introduzione
-inflammation o flammation??
-
-sostituire tutti i net con network
-
-help the network to avoid overfitting o avoids overfitting?
-
-In fact, having machines capable to early detection of malignant skin cancers -> to early detect?
-differences o difference figure1
-
-mettere keras in maiuscolo
+introduzione, modificare le sezioni
 
 occhio ai plurali sulle malattie
 
-fells mettere al passato, fells vuol dire cade e non è caduta... (GCP)
-non sono sicuro che vogliamo un modello che massimizza precision e recall, boh
+fells mettere al passato, fells vuol dire cade e non è caduta... (GCP) -> cambiato con has fallen
+non sono sicuro che vogliamo un modello che massimizza precision e recall, boh -> ah benon
 
 controllare latex
+alcuni verbi all'infito: to increase con solo increase
 
-apostrofi (fatto ma lo lascio)
-not della forma negativa (fatto ma lo lascio)
-controllare fi if (fatto ma lo lascio)
 ricontrollare se abbiamo risposto a tutte le domande del pdf
 
-dropout layers non abbiamo messo % ma diciamo percentage
+dropout layers non abbiamo messo % ma diciamo percentage, presented e presents nella stessa frase
 
+Abstract siamo a 110 parole (almeno 300) -> forse si può ampiare? Magari mettendo percentuale accuratezza spiegando

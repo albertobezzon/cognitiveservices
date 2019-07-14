@@ -17,6 +17,25 @@
 \endgroup
 
 \datalist[entry]{none/global//global/global}
+  \entry{article4}{article}{}
+    \name{author}{1}{}{%
+      {{hash=PTCRHK}{%
+         family={Philipp\bibnamedelima Tschandl},
+         familyi={P\bibinitperiod\bibinitdelim T\bibinitperiod},
+         given={Cliff Rosendahl \& Harald\bibnamedelima Kittler},
+         giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod \bibinitperiod
+  H\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PTCRHK1}
+    \strng{fullhash}{PTCRHK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{The HAM10000 dataset, a large collection of multi-source
+  dermatoscopic images of common pigmented skin lesions}
+    \field{year}{2018}
+  \endentry
+
   \entry{article1}{article}{}
     \name{author}{1}{}{%
       {{hash=AERANJKSMSHMBSTBK}{%
@@ -61,6 +80,13 @@
     \field{year}{2018}
   \endentry
 
+  \entry{ph2}{misc}{}
+    \field{labeltitlesource}{title}
+    \field{howpublished}{\url{https://www.fc.up.pt/addi/ph2\%20database.html}}
+    \field{note}{Accessed: 2019-07-11}
+    \field{title}{PH2 dataset}
+  \endentry
+
   \entry{article2}{article}{}
     \name{author}{1}{}{%
       {{hash=PLAVDB}{%
@@ -80,25 +106,6 @@
     \field{year}{2018}
   \endentry
 
-  \entry{article4}{article}{}
-    \name{author}{1}{}{%
-      {{hash=PTCRHK}{%
-         family={Philipp\bibnamedelima Tschandl},
-         familyi={P\bibinitperiod\bibinitdelim T\bibinitperiod},
-         given={Cliff Rosendahl \& Harald\bibnamedelima Kittler},
-         giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod \bibinitperiod
-  H\bibinitperiod\bibinitdelim K\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{PTCRHK1}
-    \strng{fullhash}{PTCRHK1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{The HAM10000 dataset, a large collection of multi-source
-  dermatoscopic images of common pigmented skin lesions}
-    \field{year}{2018}
-  \endentry
-
   \entry{dermofit}{misc}{}
     \field{labeltitlesource}{title}
   \field{howpublished}{\url{https://homepages.inf.ed.ac.uk/rbf/DERMOFIT/datasets.htm}}
@@ -111,13 +118,6 @@
   \field{howpublished}{\url{http://www.cs.rug.nl/~imaging/databases/melanoma_naevi/}}
     \field{note}{Accessed: 2019-07-11}
     \field{title}{MED-NODE dataset}
-  \endentry
-
-  \entry{ph2}{misc}{}
-    \field{labeltitlesource}{title}
-    \field{howpublished}{\url{https://www.fc.up.pt/addi/ph2\%20database.html}}
-    \field{note}{Accessed: 2019-07-11}
-    \field{title}{PH2 dataset}
   \endentry
 \enddatalist
 \endinput
