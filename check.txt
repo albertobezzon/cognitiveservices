@@ -1,7 +1,0 @@
-check 
-Malattie minuscole o maiuscole -> maiuscolo solo la prima -> guardare rileggendo
-
-occhio ai plurali sulle malattie -> guardare rileggendo
-non sono sicuro che vogliamo un modello che massimizza precision e recall, boh -> vedere se cambiare una frase, magari mettere giusto tradeoff tra le due...
-
-Conclusione -> aggiungere che il modello non è ancora in grado di battere i dermatologi e che quindi non è ancora pronto -> poi scrivere il resto
