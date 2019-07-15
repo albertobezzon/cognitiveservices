@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.16)  16 JUL 2019 00:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.16)  16 JUL 2019 00:52
 entering extended mode
 **./report.tex
 (report.tex
@@ -1213,21 +1213,21 @@ Package pdftex.def Info: images/firstMatrix.png  used on input line 154.
 File: images/secondMatrix.png Graphic file (type png)
 <use images/secondMatrix.png>
 Package pdftex.def Info: images/secondMatrix.png  used on input line 9.
-(pdftex.def)             Requested size: 426.79134pt x 320.11154pt.
- [12] [13 <./images/secondMatrix.png>]
-<images/thirdMatrix.png, id=222, 325.215pt x 271.0125pt>
+(pdftex.def)             Requested size: 398.33858pt x 298.76936pt.
+ [12 <./images/secondMatrix.png>]
+<images/thirdMatrix.png, id=217, 325.215pt x 271.0125pt>
 File: images/thirdMatrix.png Graphic file (type png)
 <use images/thirdMatrix.png>
 Package pdftex.def Info: images/thirdMatrix.png  used on input line 36.
 (pdftex.def)             Requested size: 369.88582pt x 308.26271pt.
- [14 <./images/thirdMatrix.png>]
-<images/overfitting-data-aug.png, id=230, 1084.05pt x 361.35pt>
+ [13]
+<images/overfitting-data-aug.png, id=225, 1084.05pt x 361.35pt>
 File: images/overfitting-data-aug.png Graphic file (type png)
 <use images/overfitting-data-aug.png>
 Package pdftex.def Info: images/overfitting-data-aug.png  used on input line 46
 .
 (pdftex.def)             Requested size: 426.79134pt x 142.26578pt.
-
+ [14 <./images/thirdMatrix.png>]
 Overfull \hbox (2.16357pt too wide) in paragraph at lines 55--64
  [][] 
  []
@@ -1275,7 +1275,7 @@ mma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb
 ><C:/Users/tomma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmti9.pfb><C:/Users/tomma/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (19 pages, 2456294 bytes).
+Output written on report.pdf (19 pages, 2456249 bytes).
 PDF statistics:
  332 PDF objects out of 1000 (max. 8388607)
  73 named destinations out of 1000 (max. 500000)
