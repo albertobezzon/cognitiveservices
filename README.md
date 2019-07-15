@@ -7,9 +7,9 @@ In `code/` folder there is the code to reproduce the experiments performed for t
 
 - `model_building.py` creates the five CNN models explained in the *Proposed model* section of the report;
 - `model_testing.py` computes the metrics scores associated with the five models built by the previous script;
-- `learning_rate_test.py` trains the proposed model with the three learning rate values explained in the *Hyperparameters choice* section of the report;
+- `learning_rate_test.py` trains the proposed model with the three learning rate values explained in the *Optimizer and optimizer hyperparameters choice* section of the report;
 - `data_augmentation.py` creates the oversampled dataset to perform the experiment explained in the *Experiments* section of the report;
 - `model.py` performs all the experiments presented in the *Experiments* section of the report;
-- `model_test.py` computes the metrics scores associated to the models built by the previous script.
+- `model_test.py` computes the metrics scores associated with the models built by the previous script.
 
 In `results/` folder there are all the results obtained in this project and showed in the project report.

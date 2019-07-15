@@ -1,17 +1,7 @@
 check 
-pensare se manca qualcosa nella bibliografia -> forse mettere dove abbiamo trovato i dati del 90% al 14% -> sono libri a pagamento (al massimo fare riferimento al paper)
-Malattie minuscole o maiuscole -> maiuscolo solo la prima
+Malattie minuscole o maiuscole -> maiuscolo solo la prima -> guardare rileggendo
 
-occhio ai plurali sulle malattie
+occhio ai plurali sulle malattie -> guardare rileggendo
+non sono sicuro che vogliamo un modello che massimizza precision e recall, boh -> vedere se cambiare una frase, magari mettere giusto tradeoff tra le due...
 
-da rileggere per questo -> non sono sicuro che vogliamo un modello che massimizza precision e recall, boh -> vedere se cambiare una frase, magari mettere giusto tradeoff tra le due...
-
-controllare latex
-alcuni verbi all'infito: to increase con solo increase
-
-
-Abstract siamo a 110 parole (almeno 300) -> secondo me così è accattivante, rischiamo di rompere tutto aggiungendo cose e anche di essere più ripetitivi di quanto già non siamo
--> mancano approach e key result ma secondo me non ha senso mettere in abstract
--> With our CNN model, we are able to distiguish malignant melanoma from the other injuries
-
-titolo sezione 4.5.2 (da modificare anche nel readme della repo)
+Conclusione -> aggiungere che il modello non è ancora in grado di battere i dermatologi e che quindi non è ancora pronto -> poi scrivere il resto
