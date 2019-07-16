@@ -21,7 +21,10 @@
 		\label{tab:hw-config}
 	\end{table}
 	
-	Our models have been implemented in Keras using tensorflow as a backend. The code is available on our GitHub repository: \url{https://github.com/albertobezzon/cognitiveservices}.
+	Our models have been implemented in Keras using tensorflow as a backend. The code is available on our GitHub repository:
+	\begin{sloppypar}
+ 	\url{https://github.com/albertobezzon/cognitiveservices}.
+	\end{sloppypar}
 
 	\subsection{Performance measures choice}
 		
@@ -113,7 +116,7 @@
 		
 		\subsubsection{Optimizer and optimizer hyperparameters choice}
 			
-			We have tried three optimizers for the gradient descent: Stochastic Gradient Descent, RMSprop and Adam optimizers. We limited the test to these three optimizers because we found they are commonly used in skin cancer classification tasks. SGD and RMSprop did not perform well on our task. They did not allow the network to train, in fact the validation accuracy was stuck at 68\%. We had the same problem of transfer learning. We then tried Adam optimizer and the network began to learn.
+			We have tried three optimizers for the gradient descent: Stochastic Gradient Descent, RMSprop and Adam optimizers. We limited the test to these three optimizers because we found they are commonly used in skin cancer classification tasks. SGD and RMSprop did not perform well on our task. They did not allow the network to train, in fact the validation accuracy was stuck at 68\%. We had the same problem of transfer learning. Then we tried Adam optimizer and the network began to learn.
 			
 			\smallskip
 			
